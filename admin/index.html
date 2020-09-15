@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Админка|МебельщикЪ</title>
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+	<link rel="stylesheet" href="admin.css">
+	<link rel="stylesheet" href="../fonts/Awesome_4.7.css">
+	<script type="text/javascript" src = "../sours/jquery.js"></script>
+	<script type="text/javascript" src = "admin.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+</head>
+<body><div id="wrap">
+	<h1>Страница админитратора сайта МебельщикЪ.</h1>
+	<div id="last_ten_products">
+		<table style="border:solid 1px gray;">
+		<caption>Последние 10 продуктов</caption>
+		<tr><th>ID</th><th>Название</th><th>Категории</th><th>Тип продукта</th><th>Цена</th><th>Скидка</th><th>Варианты расцветок</th><th>Габариты</th><th>Описание</th></tr>
+		</table>
+	</div>
+	<div id="add_product"><form action="../set_server.php" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Добавить продукт</legend>
+			<p>Название <input type="text" name="product_name" required></p>
+			<p>Тип продукта <select name="product_sub_catalog">
+				<option value="1">Кухонный гарнитур</option>
+				<option value="2">Стол</option>
+				<option value="3">Стул</option>
+				<option value="4">Подвесной шкаф</option>
+				<option value="5">Напольный шкаф</option>
+				<option value="6">Кровать</option>
+				<option value="7">Комод</option>
+				<option value="8">Туалетный столик</option>
+				<option value="9">Прикроватные тумбы</option>
+				<option value="101">Шкаф-Купе</option>
+				<option value="102">Шкаф-Распашной</option>
+				<option value="11">Полки и стелажи</option>
+				<option value="12">Пеналы</option>
+				<option value="21">Стенки и горки</option>
+				<option value="13">Журнальные столики</option>
+				<option value="14">TV Тумбы</option>
+				<option value="15">Прихожие</option>
+				<option value="16">Обувница</option>
+				<option value="17">Комплект детской</option>
+				<option value="18">Зеркала в ванную</option>
+				<option value="19">Тумбы для раковин в СУ</option>
+				<option value="20">Тумбы для офиса</option>
+			</select></p>
+			<p id="checkbox_catalog">В каких категориях отображать:<br>
+				<input type="checkbox" name="product_catalog_1" value="YES"> Для кухни<br>
+				<input type="checkbox" name="product_catalog_2" value="YES"> Для спальни<br>
+				<input type="checkbox" name="product_catalog_3" value="YES"> Для гостинной<br>
+				<input type="checkbox" name="product_catalog_4" value="YES"> Для прихожей<br>
+				<input type="checkbox" name="product_catalog_5" value="YES"> Для детской<br>
+				<input type="checkbox" name="product_catalog_6" value="YES"> Для ванной<br>
+				<input type="checkbox" name="product_catalog_7" value="YES"> Для офиса<br>
+				<input type="checkbox" name="product_catalog_8" value="YES"> Шкафы<br>
+			</p>
+			<p>Цена <input name="product_price" type="number" min="0" required></p>
+			<p>Скидка <input name="product_discont" type="number" min="0"></p>
+			<p>Варианты расцветки:
+			<ol id="add_product_list_color">
+				<li id="add_product_list_color_1"><input class="1_radio_type_color" name="type_color_1" type="radio" value="single" checked>Один   <input class="1_radio_type_color" name="type_color_1" type="radio" value="double">Два<br>
+				Цвет 1 <select class="select_product_color color_1" name="product_color_1_1"></select><br>
+				Цвет 2 <select class="select_product_color color_2" name="product_color_1_2" disabled></select></li>
+			</ol></p>
+			<input id="add_product_yet_one_color" type="button" value="Еще один цвет">
+			<p>Габариты <input name="product_size" type="text" placeholder="ШхГхВ" required></p>
+			<p><textarea name="product_description" placeholder="Ведите описание товара здесь" cols="30" rows="15" required></textarea></p>
+			<p><input name="product_file[]" type="file" accept="image/jpeg" multiple required></p>
+			<p><input type="submit" value="Добавить" disabled></p>
+		</fieldset>
+	</form></div>
+	<div id="add_color" style="margin-top:50px;"><form action="../set_server.php" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Добавить цвет</legend>
+			<p>Название <input type="text" name="color_name" required></p>
+			<p><input id="color_file" name="color_file" type="file" accept="image/jpeg" required></p>
+			<p><input type="submit" value="Добавить"></p>
+		</fieldset>
+	</form></div>
+</div>
+<div id="add_color_ok" class="notif ok">
+	<p>Цвет успешно добавлен</p>
+</div>
+<div id="add_color_error" class="notif error">
+	<p>Ощибка добавления цвета</p>
+</div>
+<div id="add_product_ok" class="notif ok">
+	<p>Продукт успешно добавлен</p>
+</div>
+<div id="add_product_error" class="notif error">
+	<p>Ощибка добавления продукта</p>
+</div>
+</body>
+</html>

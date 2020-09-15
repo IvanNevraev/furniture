@@ -1,0 +1,25 @@
+﻿.product_slider_mini_img{
+	height:100px;
+	width:20%;
+	cursor:pointer;
+	margin-right:5px;
+}
+.product_button{
+	margin: 20px 0px;
+}
+#product{
+	width:75%;
+}
+#product_name{
+	color:var(--blue);
+}
+#product_slider{
+	width:100%;
+}
+#product_main_img{
+	width:100%;
+}
+#product_discont{
+	display:none;
+	color:red;
+}

@@ -1,0 +1,24 @@
+﻿.product_name{
+	color:var(--blue);
+	font-size:20px;
+}
+.product_price{
+	font-size:30px;
+	font-weight:900;
+}
+#sort{
+	min-height:1000px;
+	width:75%;
+}
+#sort_table{
+	width:100%;
+	text-align:center;
+	padding: 20px 0;
+}
+#sort_table img{
+	width:200px;
+	height:130px;
+}
+#sort_table td{
+	padding: 20px 0;
+}

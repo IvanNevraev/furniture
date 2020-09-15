@@ -1,0 +1,26 @@
+﻿.badge_discont{
+	position:absolute;
+	top:80px;
+	right:50px;
+	width:200px;
+	height:100px;
+}
+#stock_block{
+	width:75%;
+	margin: 30px 0;
+}
+#stock_table{
+	border-collapse:collapse;
+}
+#stock_table td{
+	position:relative;
+	border:1px solid #ddd;
+	border-left:none;
+	padding:10px;
+}
+#stock_table img{
+	width:100%;
+}
+#stock_table h3{
+	margin: 30px 0;
+}

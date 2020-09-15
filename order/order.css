@@ -1,0 +1,58 @@
+.trash, .plus, .minus{
+	cursor:pointer;
+}
+.trash:hover, .plus:hover, .minus:hover{
+	transform:scale(1.1);
+	color:red;
+}
+#contactInformation{
+	width:100%;
+}
+#contactInformation td{
+	padding: 5px 10px;
+}
+#contactInformation input[type=textarea]{
+	height:150px;
+}
+#contactInformation input{
+	width:100%;
+}
+#informationAboutOrder{
+  border-collapse: collapse;
+  counter-reset: schetchik;
+  width:100%;
+  text-align:center;
+}
+#informationAboutOrder tr {
+  counter-increment: schetchik;  /* при встрече тега tr счётчик с названием "schetchik" увеличивается на единицу */
+	border-bottom: solid 1px gray;
+}
+#informationAboutOrder tr:before {
+  content: counter(schetchik);  /* значение счётчика с названием "schetchik" записывается в первую клетку строки */ 
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+#informationAboutOrder td{
+	padding: 10px 0;
+}
+#pSumm{
+	text-align:right;
+	font-weight:500;
+	font-size:20px;
+	margin-right:5px;
+	margin-top:10px;
+}
+#deliveryMethod{
+	width:100%;
+}
+#deliveryMethod input{
+	cursor:pointer;
+}
+#pTotal{
+	text-align:right;
+	margin-right:5px;
+	margin-top:10px;
+	font-weight:700;
+	font-size:25px;
+}

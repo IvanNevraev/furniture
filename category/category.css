@@ -1,0 +1,18 @@
+table{
+	width:100%;
+	text-align:center;
+	padding: 20px 0;
+}
+table img{
+	width:200px;
+	height:130px;
+}
+#main_div{
+	width:75%;
+}
+#main_div>div{
+	min-height:800px;
+}
+#catalog, #for_kitchen, #for_batroom, #for_hall, #for_hallway, #for_playroom, #for_bathroom, #for_office, #for_closet{
+	display:none;
+}
