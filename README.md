@@ -1,5 +1,5 @@
 # furniture
-http://ural-mebel74.ru
+
 This is website for a litlle furniture company. There are some pages.
 Here use HTML/CSS/JS/PHP/SQL/JQuery.
 Front-end download from server information about products by AJAX.
